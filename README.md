@@ -33,9 +33,9 @@ since the cron job runs every minute we don't need to have the inertval-secs par
 logs.txt simply changes every minute and tells us if the directories are exact or different.
 ### what you need to know
 we have dir path that we check on as:
-/home/omar/Downloads/labs/lab2/orig_dir
+dir_backup/orig_dir
 and the backup path as:
-/home/omar/Downloads/labs/lab2/backupdir
+dir_backup/backupdir
 as well as the max number backups=5
 if you want feel free to change the parameters in the beginning of the bash file it's up to you.
  
@@ -46,7 +46,7 @@ or you can modify the directory and modify step 3
 $ crontab -e
 
 3-paste this at the end of the file that opens
-* * * * * /bin/bash /home/omar/Downloads/labs/lab2/backupd_cronjobs.sh
+\* \* \* \* \* /bin/bash dir_backup/backupd_cronjobs.sh
 
 4-press control+s to save
 5-press control+x to exit
